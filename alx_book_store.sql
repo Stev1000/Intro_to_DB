@@ -1,18 +1,6 @@
--- Drop the database if it exists
-DROP DATABASE IF EXISTS alx_book_store;
-
--- Create the database
+-- Create the alx_book_store database
 CREATE DATABASE alx_book_store;
-
--- Use the database
 USE alx_book_store;
-
--- Drop tables if they exist
-DROP TABLE IF EXISTS Order_Details;
-DROP TABLE IF EXISTS Orders;
-DROP TABLE IF EXISTS Customers;
-DROP TABLE IF EXISTS Books;
-DROP TABLE IF EXISTS Authors;
 
 -- Create the Authors table
 CREATE TABLE Authors (
@@ -34,7 +22,7 @@ CREATE TABLE Books (
 CREATE TABLE Customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_name VARCHAR(215) NOT NULL,
-    email VARCHAR(215) NOT NULL UNIQUE,
+    email VARCHAR(215) NOT NULL,
     address TEXT
 );
 
